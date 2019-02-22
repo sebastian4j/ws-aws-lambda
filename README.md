@@ -1,3 +1,4 @@
+
 # AWS Lambda & WebSockets
 Este repositorio contiene un ejemplo simple de comunicación utilizando web sockets desde aws lambdas y api gateway (se asume conocimiento previo en lambdas y api gateway de aws).
 
@@ -11,7 +12,9 @@ Este repositorio contiene un ejemplo simple de comunicación utilizando web sock
 >https://docs.aws.amazon.com/es_es/apigateway/latest/developerguide/apigateway-websocket-api.html
 >
 > Recomiendo para este ejemplo utilizar en todos los **Routes** el mismo lambda
->
+
+>El rol asociado al lambda tiene que tener la politica con permiso a **ExecuteAPI** y el resource puede ser ``` arn:aws:execute-api:*:*:*/*/*/* ```
+
 - Luego, al tener disponible el api, copiar desde la etapa creada el valor de **Connection URL** y escribirlo en las **Variables de entorno** del lambda asociado a la clave **url_api**:
 > La Connection URL es algo como https://XXXXXXXX.execute-api.us-east-0.amazonaws.com/test/@connections
 
